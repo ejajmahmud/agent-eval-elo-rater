@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-eval-elo-rater"
+version = "0.1.0"
+description = "Competitive pairwise Head-to-Head Elo rating engine for evaluating multi-model and multi-prompt agent performance"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-eval-elo-rater = "agent_eval_elo_rater.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_eval_elo_rater*"]
